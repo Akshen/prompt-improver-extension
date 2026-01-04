@@ -1,0 +1,418 @@
+/**
+ * Styles for the Prompt Improver widget
+ */
+
+.prompt-improver-widget {
+  position: fixed;
+  width: 380px;
+  max-height: 600px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  z-index: 999999;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.prompt-improver-widget.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header */
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.widget-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.widget-icon {
+  font-size: 20px;
+}
+
+.widget-close {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.widget-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Body */
+.widget-body {
+  padding: 20px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.widget-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.widget-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.widget-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+/* Quality Score */
+.quality-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.score-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.score-number {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.score-rating {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Issues Section */
+.issues-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #374151;
+}
+
+.issues-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.issue-item {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 3px solid #d1d5db;
+}
+
+.issue-item.issue-high {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
+
+.issue-item.issue-medium {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.issue-item.issue-low {
+  border-left-color: #10b981;
+  background: #f0fdf4;
+}
+
+.issue-badge {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.issue-content {
+  flex: 1;
+}
+
+.issue-message {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.issue-suggestion {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 24px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.success-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.success-message p {
+  margin: 0;
+  color: #166534;
+  font-weight: 500;
+}
+
+/* Actions */
+.actions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5568d3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+  background: #f5f7ff;
+}
+
+.btn-large {
+  padding: 16px 24px;
+  font-size: 16px;
+}
+
+/* Footer */
+.widget-footer {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.upgrade-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.upgrade-link:hover {
+  color: #5568d3;
+  text-decoration: underline;
+}
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #1f2937;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  z-index: 1000000;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.toast-error {
+  background: #ef4444;
+}
+
+/* Upgrade Modal */
+.upgrade-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.upgrade-modal.visible {
+  opacity: 1;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 440px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+.upgrade-modal.visible .modal-content {
+  transform: scale(1);
+}
+
+.modal-content h2 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+.modal-content p {
+  color: #6b7280;
+  margin: 0 0 16px 0;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.modal-content li {
+  padding: 8px 0;
+  color: #374151;
+  font-size: 15px;
+}
+
+.modal-price {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.price {
+  font-size: 48px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.modal-close {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.modal-close:hover {
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .prompt-improver-widget {
+    width: calc(100vw - 32px);
+    left: 16px !important;
+    right: 16px !important;
+  }
+}
+
+/* Auto-fade behavior enhancement */
+.prompt-improver-widget {
+  backdrop-filter: blur(8px); /* Slight blur when faded */
+  will-change: opacity, transform; /* Performance optimization */
+}
+
+.prompt-improver-widget:hover {
+  backdrop-filter: blur(0px); /* Remove blur when focused */
+}
+
+/* Ensure widget doesn't block clicks when faded */
+.prompt-improver-widget {
+  pointer-events: auto !important;
+}
