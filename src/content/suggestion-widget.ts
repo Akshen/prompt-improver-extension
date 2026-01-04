@@ -44,9 +44,9 @@ private positionWidget(anchor: HTMLElement): void {
 
   // Position at bottom-right corner
   this.container.style.position = 'fixed';
-  this.container.style.bottom = '80px';
+  this.container.style.top = '20px';
   this.container.style.right = '24px';
-  this.container.style.top = 'auto';
+  this.container.style.bottom = 'auto';
   this.container.style.left = 'auto';
   this.container.style.zIndex = '999999';
   

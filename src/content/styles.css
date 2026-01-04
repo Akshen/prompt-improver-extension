@@ -4,8 +4,8 @@
 
 .prompt-improver-widget {
   position: fixed;
-  width: 380px;
-  max-height: 600px;
+  width: 300px;
+  max-height: 500px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
